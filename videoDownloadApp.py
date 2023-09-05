@@ -44,7 +44,7 @@ def execute_python_code(user_input):
     try:
         # downloading the video
         video_stream.download(output_path=output_directory, filename=dynamic_filename + ".mp4")
-    except:
+    except Exception as e:
         print("Some Error while downloading: ", str(e))  # to handle exception
 
     print('Task Completed!')
