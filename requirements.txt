@@ -1,5 +1,5 @@
 flask==2.2.5
-instaloader==4.10
+instaloader==4.9.5
 schedule==1.2.0
 PyAutoGUI==0.9.54
 pytube==15.0.0
