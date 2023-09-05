@@ -1,6 +1,6 @@
-flask>=2.3.3
-instaloader>=4.10
-schedule>=1.2.0
-PyAutoGUI>=0.9.54
-pytube>=15.0.0
-requests>=2.31.0
+flask=2.3.3
+instaloader=4.10
+schedule=1.2.0
+PyAutoGUI=0.9.54
+pytube=15.0.0
+requests=2.31.0
