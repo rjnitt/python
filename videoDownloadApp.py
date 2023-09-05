@@ -14,6 +14,7 @@ def index():
         user_input = request.form["user_input"]
         result = execute_python_code(user_input)
 
+
     return render_template("index.html", result=result)
 
 def execute_python_code(user_input):
@@ -30,7 +31,7 @@ def execute_python_code(user_input):
         print("Connection Error: ", str(e))  # to handle exception
 
     video_stream = video_download.streams.get_lowest_resolution()
-    output_directory = '~/Users/jainrohit/Documents/Python/video'
+    output_directory = '/Users/jainrohit/Documents'
 
     # Get the current date and time
     current_datetime = datetime.datetime.now()
