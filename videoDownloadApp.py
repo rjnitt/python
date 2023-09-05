@@ -26,8 +26,8 @@ def execute_python_code(user_input):
         # for stream in video_download.streams.all():
         #     print(stream)
 
-    except:
-        print("Connection Error")  # to handle exception
+    except Exception as e:
+        print("Connection Error: ", str(e))  # to handle exception
 
     video_stream = video_download.streams.get_lowest_resolution()
     output_directory = '/Users/jainrohit/Documents/Python/video'
@@ -45,7 +45,7 @@ def execute_python_code(user_input):
         # downloading the video
         video_stream.download(output_path=output_directory, filename=dynamic_filename + ".mp4")
     except:
-        print("Some Error!")
+        print("Some Error while downloading: ", str(e))  # to handle exception
 
     print('Task Completed!')
     print('Video Downloaded', user_input)
