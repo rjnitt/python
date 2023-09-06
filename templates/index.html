@@ -1,28 +1,59 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>Execute Python Code</title>-->
+<!--    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">-->
+<!--</head>-->
+<!--<body>-->
+<!--    <div class="container">-->
+<!--        <header>-->
+<!--            <div class="logo">-->
+<!--                <img src="static/youtube_logo.png" alt="YouTube Logo">-->
+<!--            </div>-->
+<!--            <h1>Download YouTube Video with one click!</h1>-->
+<!--        </header>-->
+<!--        <main>-->
+<!--            <form id="python-form" method="post">-->
+<!--                <label for="user_input">Enter YouTube Video URL:</label>-->
+<!--                <textarea id="user_input" name="user_input" required></textarea>-->
+<!--                <button type="submit" >Download</button>-->
+<!--            </form>-->
+
+
+<!--        </main>-->
+
+<!--    </div>-->
+<!--    <script src="{{ url_for('static', filename='script.js') }}"></script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>YouTube Video Downloader</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>Download YouTube Video</h1>-->
+<!--    <form method="POST">-->
+<!--        <label for="video_url">Enter YouTube Video URL:</label>-->
+<!--        <input type="text" id="video_url" name="video_url" required>-->
+<!--        <button type="submit">Download</button>-->
+<!--    </form>-->
+<!--</body>-->
+<!--</html>-->
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Execute Python Code</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>YouTube Video Downloader</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo">
-                <img src="static/youtube_logo.png" alt="YouTube Logo">
-            </div>
-            <h1>Download YouTube Video with one click!</h1>
-        </header>
-        <main>
-            <form id="python-form" method="post">
-                <label for="user_input">Enter YouTube Video URL:</label>
-                <textarea id="user_input" name="user_input" required></textarea>
-                <button type="submit">Download</button>
-            </form>
+    <h1>Download YouTube Video</h1>
+    <input type="text" id="videoUrl" placeholder="Enter YouTube Video URL">
+    <button id="downloadButton">Download</button>
+    <div id="downloadStatus"></div>
 
-
-        </main>
-
-    </div>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -8,8 +8,8 @@ import json
 
 # consumer_key = os.environ.get("CONSUMER_KEY")
 # consumer_secret = os.environ.get("CONSUMER_SECRET")
-consumer_key = "5rpl3MaDAp6FBkKq16zpZYLqA"
-consumer_secret = "DDnTVoYo1i1jZeDnTPEHiBCbIcxetlqS7AgFQBGShV2SHlNATx"
+consumer_key = ""
+consumer_secret = ""
 
 
 # User fields are adjustable, options include:

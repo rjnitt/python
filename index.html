@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Video Downloader</title>
+</head>
+<body>
+    <h1>Download YouTube Video</h1>
+    <input type="text" id="videoUrl" placeholder="Enter YouTube Video URL">
+    <button id="downloadButton">Download</button>
+    <div id="downloadStatus"></div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const videoUrlInput = document.getElementById("videoUrl");
+        const downloadButton = document.getElementById("downloadButton");
+        const downloadStatus = document.getElementById("downloadStatus");
+
+        downloadButton.addEventListener("click", function () {
+            const videoUrl = videoUrlInput.value;
+            if (!videoUrl) {
+                downloadStatus.innerText = "Please enter a YouTube video URL.";
+                return;
+            }
+
+            downloadStatus.innerText = "Downloading... Please wait.";
+
+            fetch(`/download?videoUrl=${encodeURIComponent(videoUrl)}`)
+                .then(response => response.text())
+                .then(data => {
+                    downloadStatus.innerHTML = data;
+                })
+                .catch(error => {
+                    downloadStatus.innerText = `Error: ${error.message}`;
+                });
+        });
+    });
+    </script>
+</body>
+</html>
